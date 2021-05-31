@@ -1,0 +1,5 @@
+tit-web-client:
+    image: tit-web-client:${TAG}
+    net: host
+    environment:
+    - PORT=${PORT}
