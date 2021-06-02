@@ -1,0 +1,29 @@
+version: "2"
+services:
+  db:
+    image: postgres:13
+    network_mode: host
+    environment:
+    - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+    - /srv/_postgres:/var/lib/postgresql/data
+  admin:
+    image: tit-api:${TAG}
+    network_mode: host
+    environment:
+    - TYPE=admin
+    - ADMIN_PORT=${ADMIN_PORT}
+  backend:
+    image: tit-api:${TAG}
+    network_mode: host
+    environment:
+    - TYPE=backend
+    - BACKEND_PORT=${BACKEND_PORT}
+    - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+    - PG_NAME=${PG_NAME}
+    - PG_USER=${PG_USER}
+    - PG_PASSWORD=${PG_PASSWORD}
+    - PG_HOST=${PG_HOST}
+    - PG_PORT=${PG_PORT}
+    - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    - SECRET_KEY=${SECRET_KEY}
