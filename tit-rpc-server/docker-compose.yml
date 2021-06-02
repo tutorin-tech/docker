@@ -1,0 +1,9 @@
+tit-rpc-server:
+    image: tit-rpc-server:${TAG}
+    net: host
+    environment:
+    - PORT=${PORT}
+    - SECRET_KEY=${SECRET_KEY}
+    - TIT_API_HOST=${TIT_API_HOST}
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
