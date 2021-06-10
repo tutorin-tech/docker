@@ -12,6 +12,18 @@ export ALLOWED_HOSTS="${ALLOWED_HOSTS:="127.0.0.1"}"
 
 export DEBUG="${DEBUG}"
 
+export DEFAULT_FROM_EMAIL="${DEFAULT_FROM_EMAIL:="info@tutorin.tech"}"
+
+export EMAIL_HOST="${EMAIL_HOST}"
+
+export EMAIL_PORT="${EMAIL_PORT:="587"}"
+
+export EMAIL_HOST_USER="${EMAIL_HOST_USER}"
+
+export EMAIL_HOST_PASSWORD="${EMAIL_HOST_PASSWORD}"
+
+export EMAIL_USE_TLS="${EMAIL_USE_TLS:="true"}"
+
 export PG_NAME="${PG_NAME:="tit-api"}"
 
 export PG_USER="${PG_USER:="postgres"}"
@@ -23,6 +35,14 @@ export PG_HOST="${PG_HOST:="localhost"}"
 export PG_PORT="${PG_PORT:="5432"}"
 
 export POSTGRES_PASSWORD="${POSTGRES_PASSWORD:="secret"}"
+
+export ROCKET_CHAT_DOMAIN="${ROCKET_CHAT_DOMAIN:="https://rc.cusdeb.com/"}"
+
+export ROCKET_CHAT_USERNAME="${ROCKET_CHAT_USERNAME}"
+
+export ROCKET_CHAT_PASSWORD="${ROCKET_CHAT_PASSWORD}"
+
+export ROCKET_CHAT_ROOM="${ROCKET_CHAT_ROOM:="tit-contact-us"}"
 
 export SECRET_KEY="${SECRET_KEY}"
 
