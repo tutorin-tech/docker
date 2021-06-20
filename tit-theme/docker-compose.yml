@@ -1,0 +1,5 @@
+tit-theme:
+    image: tit-theme:${TAG}
+    net: host
+    environment:
+    - PORT=${PORT}
