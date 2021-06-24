@@ -1,0 +1,10 @@
+tit-landing:
+  image: tit-landing:${TAG}
+  net: host
+  environment:
+    - PORT=${PORT}
+    - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+    - DEBUG=${DEBUG}
+    - SECRET_KEY=${SECRET_KEY}
+    - STATIC_URL=${STATIC_URL}
+    - TIT_API_HOST=${TIT_API_HOST}
