@@ -11,6 +11,7 @@ RUN echo https://mirror.yandex.ru/mirrors/alpine/v3.13/main/       > /etc/apk/re
     curl \
     gcc \
     git \
+    jpeg-dev \
     linux-headers \
     musl-dev \
     nginx \
@@ -18,6 +19,7 @@ RUN echo https://mirror.yandex.ru/mirrors/alpine/v3.13/main/       > /etc/apk/re
     postgresql-dev \
     python3-dev \
     py3-pip \
+    zlib-dev \
  \
  && cd /var/www \
  && git clone -b $BRANCH --depth 1 https://github.com/tutorin-tech/tit-api.git \
