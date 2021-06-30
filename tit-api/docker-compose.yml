@@ -13,6 +13,8 @@ services:
     environment:
     - TYPE=static
     - STATIC_PORT=${STATIC_PORT}
+    volumes:
+    - /srv/_media:/var/www/tit-api/media:ro
   backend:
     image: tit-api:${TAG}
     network_mode: host
@@ -39,3 +41,6 @@ services:
     - ROCKET_CHAT_USERNAME=${ROCKET_CHAT_USERNAME}
     - ROCKET_CHAT_PASSWORD=${ROCKET_CHAT_PASSWORD}
     - ROCKET_CHAT_ROOM=${ROCKET_CHAT_ROOM}
+    - MEDIA_URL=${MEDIA_URL}
+    volumes:
+    - /srv/_media:/var/www/tit-api/media

@@ -44,9 +44,15 @@ export ROCKET_CHAT_PASSWORD="${ROCKET_CHAT_PASSWORD}"
 
 export ROCKET_CHAT_ROOM="${ROCKET_CHAT_ROOM:="tit-contact-us"}"
 
+export MEDIA_URL="${MEDIA_URL:="/media/"}"
+
 export SECRET_KEY="${SECRET_KEY}"
 
 set +x
+
+# Директория media создается под пользователем root, нужно изменить владельца на nginx,
+# чтобы можно было сохранять в нее файлы.
+chown -R nginx:nginx /var/www/tit-api
 
 case "${TYPE}" in
 static)
