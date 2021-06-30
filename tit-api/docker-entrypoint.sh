@@ -2,7 +2,7 @@
 
 set -x
 
-ADMIN_PORT="${ADMIN_PORT:="7999"}"
+STATIC_PORT="${STATIC_PORT:="7999"}"
 
 BACKEND_PORT="${BACKEND_PORT:="8003"}"
 
@@ -49,8 +49,8 @@ export SECRET_KEY="${SECRET_KEY}"
 set +x
 
 case "${TYPE}" in
-admin)
-    sed -i -e "s/PORT/${ADMIN_PORT}/" /etc/nginx/conf.d/default.conf
+static)
+    sed -i -e "s/PORT/${STATIC_PORT}/" /etc/nginx/conf.d/default.conf
 
     mkdir -p /run/nginx
 
