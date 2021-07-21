@@ -3,6 +3,7 @@ tit-landing:
   net: host
   environment:
     - PORT=${PORT}
+    - METRIKA_COUNTER=${METRIKA_COUNTER}
     - ALLOWED_HOSTS=${ALLOWED_HOSTS}
     - DEBUG=${DEBUG}
     - SECRET_KEY=${SECRET_KEY}
