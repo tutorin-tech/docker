@@ -3,5 +3,6 @@ tit-web-client:
     net: host
     environment:
     - PORT=${PORT}
+    - REACT_APP_METRIKA=${REACT_APP_METRIKA}
     - REACT_APP_TIT_RPC_SERVER_URL=${REACT_APP_TIT_RPC_SERVER_URL}
     - REACT_APP_TIT_THEME_HOST=${REACT_APP_TIT_THEME_HOST}
