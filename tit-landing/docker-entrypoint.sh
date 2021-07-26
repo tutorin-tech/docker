@@ -25,4 +25,7 @@ sed -i -e "s/PORT/${PORT}/" /var/www/tit-landing/uwsgi.ini
 
 sed -i -e "s/%METRIKA_COUNTER%/${METRIKA_COUNTER}/" /var/www/tit-landing/templates/layouts/base.html
 
+# For Django built-in applications.
+python3 manage.py migrate
+
 uwsgi --ini /var/www/tit-landing/uwsgi.ini
